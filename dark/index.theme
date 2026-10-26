@@ -1,0 +1,34 @@
+[Icon Theme]
+Name=Neuwaita-Dark
+Comment=Neuwaita icon theme, dark variant
+Inherits=Neuwaita,Adwaita,hicolor,breeze
+Example=folder
+Directories=scalable/apps,scalable/mimetypes,scalable/places,scalable/status
+
+[scalable/apps]
+MinSize=1
+Size=128
+MaxSize=256
+Context=Applications
+Type=Scalable
+
+[scalable/mimetypes]
+MinSize=1
+Size=128
+MaxSize=256
+Context=MimeTypes
+Type=Scalable
+
+[scalable/places]
+MinSize=1
+Size=128
+MaxSize=512
+Context=Places
+Type=Scalable
+
+[scalable/status]
+MinSize=1
+Size=128
+MaxSize=256
+Context=Status
+Type=Scalable
