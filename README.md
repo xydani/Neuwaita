@@ -2,7 +2,7 @@
 <h4 align="center"> A different take on the Adwaita theme. </h4>
 
 > [!NOTE]
-> This project is maintained with the help of [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant. Every change is reviewed and tested by the maintainer before it is published.
+> This project is maintained with the help of [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant.
 
 ![Showcase](img/Showcase.png)
 
