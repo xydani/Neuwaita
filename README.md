@@ -1,6 +1,9 @@
 <h1 align="center"> Neuwaita </h1>
 <h4 align="center"> A different take on the Adwaita theme. </h4>
 
+> [!NOTE]
+> This project is maintained with the help of [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant. Every change is reviewed and tested by the maintainer before it is published.
+
 ![Showcase](img/Showcase.png)
 
 ![Mimes](img/Mimes.png)
@@ -134,4 +137,6 @@ This repository continues the project from the last public version (commit 31e91
 
 ## License
 Licensed under the GNU GPL v3 (see [LICENSE](LICENSE)). The original repository also included a CC0 1.0 dedication ([LICENSE.md](LICENSE.md)), kept here for reference.
-All app logos and trademarks belong to their respective owners.
+
+### Third-party logos and trademarks
+Many icons in this theme are reinterpretations of the logos of third-party apps and services. Those logos, names and trademarks belong to their respective owners. They are used only to identify the corresponding apps on your desktop, and their use does not imply any affiliation with or endorsement by their owners. The GPL v3 license covers the work done on this theme, not the third-party trademarks.
