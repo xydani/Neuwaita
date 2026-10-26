@@ -1,0 +1,52 @@
+name: Icon request
+description: Ask for a new app or tray icon
+title: "[Icon request] "
+labels: ["icon request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a request, check that the icon isn't already in `scalable/apps` or `scalable/status`.
+        See [How to find the actual name of the icon](https://github.com/xydani/Neuwaita#how-to-find-the-actual-name-of-the-icon).
+  - type: input
+    id: app
+    attributes:
+      label: App name
+      placeholder: Bruno
+    validations:
+      required: true
+  - type: input
+    id: icon-name
+    attributes:
+      label: Icon name
+      description: The value of `Icon=` in the app's .desktop file, or the tray icon name
+      placeholder: com.usebruno.Bruno
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Icon type
+      options:
+        - App icon
+        - Tray / status icon
+        - File type icon
+        - Folder icon
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: How is the app installed?
+      options:
+        - Flatpak
+        - Distribution package (dnf, apt, pacman...)
+        - AppImage
+        - Other
+  - type: textarea
+    id: original
+    attributes:
+      label: Original icon
+      description: Drag and drop a screenshot or the original icon file here
+    validations:
+      required: true
