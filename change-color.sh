@@ -28,6 +28,8 @@ else
 fi
 
 if [ "$2" != '--no-reload' ]; then
+    # switch away and back to the current theme (Neuwaita or Neuwaita-Dark) to reload it
+    currentTheme=$(gsettings get org.gnome.desktop.interface icon-theme)
     gsettings set org.gnome.desktop.interface icon-theme 'hicolor'
-    gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'
+    gsettings set org.gnome.desktop.interface icon-theme "${currentTheme//\'/}"
 fi
