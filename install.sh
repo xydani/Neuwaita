@@ -45,9 +45,22 @@ fi
 if [ "$(readlink -f "$dest")" = "$srcDir" ]; then
     echo "${dest} already points to this directory, nothing to copy."
 else
+    # keep the folder color chosen with change-color.sh
+    savedFolder=""
+    if [ -f "${dest}/scalable/places/folder.svg" ]; then
+        savedFolder="$(mktemp)"
+        cp "${dest}/scalable/places/folder.svg" "$savedFolder"
+    fi
+
     rm -rf "$dest"
     mkdir -p "$dest"
     cp -a "$srcDir"/{index.theme,scalable,Palette.txt,change-color.sh,watch-accent.sh,LICENSE} "$dest"/
+
+    if [ -n "$savedFolder" ]; then
+        mv "$savedFolder" "${dest}/scalable/places/folder.svg"
+        chmod 644 "${dest}/scalable/places/folder.svg"
+    fi
+
     command -v gtk-update-icon-cache >/dev/null && gtk-update-icon-cache -qf "$dest" 2>/dev/null || true
     echo "Installed to ${dest}"
 fi
@@ -71,5 +84,12 @@ EOF
 fi
 
 if [ $system = 0 ] && command -v gsettings >/dev/null; then
-    echo "Activate it with: gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'"
+    if [ "$(gsettings get org.gnome.desktop.interface icon-theme 2>/dev/null)" = "'Neuwaita'" ]; then
+        # switch theme back and forth so running apps reload the icons
+        gsettings set org.gnome.desktop.interface icon-theme 'hicolor'
+        gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'
+        echo "Theme reloaded"
+    else
+        echo "Activate it with: gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'"
+    fi
 fi
