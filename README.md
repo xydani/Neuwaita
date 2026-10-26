@@ -13,6 +13,10 @@ This repository continues the project from the last public version ([commit 31e9
 
 Neuwaita is a scalable (SVG) icon theme for Linux desktops, built for GNOME. It covers apps, file types, folders and some system tray icons. Apps it doesn't cover fall back to Adwaita, hicolor and Breeze.
 
+It comes in two variants:
+- **Neuwaita**: the main theme, with the full set of icons.
+- **Neuwaita-Dark**: dark versions of some icons (for example the light app tiles). Icons without a dark version are taken from Neuwaita, so you always get the full set. Neuwaita-Dark needs Neuwaita to be installed too.
+
 ## Installation
 ### With git (recommended, easy to update)
 User installation:
@@ -23,21 +27,27 @@ System-wide installation:
 ```sh
 sudo git clone https://github.com/xydani/Neuwaita.git /usr/share/icons/Neuwaita
 ```
+To also get Neuwaita-Dark, link it next to the main theme (it updates together with it):
+```sh
+ln -s ~/.local/share/icons/Neuwaita/dark ~/.local/share/icons/Neuwaita-Dark              # user installation
+sudo ln -s /usr/share/icons/Neuwaita/dark /usr/share/icons/Neuwaita-Dark                 # system-wide installation
+```
 
 ### With the install script
 Clone or [download](https://github.com/xydani/Neuwaita/archive/refs/heads/main.zip) the repository anywhere, then from its folder run:
 ```sh
 ./install.sh                  # current user (~/.local/share/icons/Neuwaita)
 sudo ./install.sh --system    # system-wide (/usr/share/icons/Neuwaita)
+./install.sh --dark           # also install Neuwaita-Dark (works with --system too)
 ./install.sh --watch-accent   # current user + folders follow the GNOME accent color
-./install.sh --uninstall      # remove (add --system for the system-wide install)
+./install.sh --uninstall      # remove both variants (add --system for the system-wide install)
 ```
-The script copies only the theme files and replaces a previous installation made with it, keeping the folder color you chose. It never overwrites a git clone or a folder that is not Neuwaita.
+The script copies only the theme files and replaces a previous installation made with it, keeping the folder color you chose. If Neuwaita-Dark is already installed, it is updated too. It never overwrites a git clone or a folder that is not Neuwaita.
 
 ### Activating the theme
-Select Neuwaita in GNOME Tweaks, or run:
+Select Neuwaita or Neuwaita-Dark in GNOME Tweaks, or run:
 ```sh
-gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'
+gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'        # or 'Neuwaita-Dark'
 ```
 **Log out and back in** after installing or updating, so that the shell, the tray and all running apps pick up the new icons.
 
@@ -131,8 +141,9 @@ Pull requests with new icons are welcome. Please follow the conventions of the e
   cd scalable/apps
   ln -s com.usebruno.Bruno.svg bruno.svg
   ```
-- **Check** that there are no broken symlinks before committing: `find scalable -xtype l` should print nothing.
-- **Test** your icons with `./install.sh`, then log out and back in.
+- **Dark variants:** put the dark version in `dark/scalable/<same folder>/` with **the same file name** as the normal icon, and recreate there the same symlinks the normal icon has (otherwise those names would still show the normal icon in Neuwaita-Dark). Every icon must exist in the main theme too; `dark/` only contains the icons that change.
+- **Check** that there are no broken symlinks before committing: `find scalable dark -xtype l` should print nothing.
+- **Test** your icons with `./install.sh --dark`, then log out and back in.
 
 ## License
 Licensed under the GNU GPL v3 (see [LICENSE](LICENSE)). The original repository also included a CC0 1.0 dedication ([LICENSE.md](LICENSE.md)), kept here for reference.
