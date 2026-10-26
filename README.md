@@ -1,6 +1,9 @@
 <h1 align="center"> Neuwaita </h1>
 <h4 align="center"> A different take on the Adwaita theme. </h4>
 
+Neuwaita was originally created by **RusticBard** (github.com/RusticBard/Neuwaita, no longer available), with contributions from the community.
+This repository continues the project from the last public version ([commit 31e918f](https://github.com/xydani/Neuwaita/commit/31e918f), March 2026) and adds new icons and fixes.
+
 > [!NOTE]
 > This project is maintained with the help of [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant.
 
@@ -130,10 +133,6 @@ Pull requests with new icons are welcome. Please follow the conventions of the e
   ```
 - **Check** that there are no broken symlinks before committing: `find scalable -xtype l` should print nothing.
 - **Test** your icons with `./install.sh`, then log out and back in.
-
-## Credits
-Neuwaita was originally created by **RusticBard** (github.com/RusticBard/Neuwaita, no longer available), with contributions from the community.
-This repository continues the project from the last public version (commit 31e918f, March 2026) and adds new icons and fixes.
 
 ## License
 Licensed under the GNU GPL v3 (see [LICENSE](LICENSE)). The original repository also included a CC0 1.0 dedication ([LICENSE.md](LICENSE.md)), kept here for reference.
