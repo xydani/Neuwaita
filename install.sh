@@ -26,8 +26,33 @@ done
 dest="${destRoot}/Neuwaita"
 serviceFile="${HOME}/.config/systemd/user/watchAccent.service"
 
+# true if $1 is a Neuwaita theme folder
+isNeuwaita() {
+    grep -qx 'Name=Neuwaita' "$1/index.theme" 2>/dev/null
+}
+
+if [ ! -f "${srcDir}/index.theme" ] || [ ! -d "${srcDir}/scalable" ]; then
+    echo "Run this script from the Neuwaita folder, next to index.theme."
+    exit 1
+fi
+
+if [ $system = 1 ] && [ "$(id -u)" != 0 ]; then
+    echo "--system needs root, run: sudo $0 $*"
+    exit 1
+fi
+
+if [ $system = 0 ] && [ "$(id -u)" = 0 ]; then
+    echo "Running as root would install into root's home. Run without sudo, or add --system."
+    exit 1
+fi
+
 if [ $system = 1 ] && [ $watch = 1 ]; then
     echo "--watch-accent needs write access to the theme, use it with a user install."
+    exit 1
+fi
+
+if [ -e "$dest" ] && [ "$(readlink -f "$dest")" != "$srcDir" ] && ! isNeuwaita "$dest"; then
+    echo "${dest} exists but is not a Neuwaita theme, not touching it."
     exit 1
 fi
 
@@ -37,6 +62,10 @@ if [ $uninstall = 1 ]; then
         rm -f "$serviceFile"
         systemctl --user daemon-reload
     fi
+    if [ "$(readlink -f "$dest")" = "$srcDir" ]; then
+        echo "${dest} points to this directory, remove it by hand if you really want to."
+        exit 1
+    fi
     rm -rf "$dest"
     echo "Removed ${dest}"
     exit 0
@@ -44,21 +73,20 @@ fi
 
 if [ "$(readlink -f "$dest")" = "$srcDir" ]; then
     echo "${dest} already points to this directory, nothing to copy."
+elif [ -d "${dest}/.git" ]; then
+    echo "${dest} is a git clone. Update it with: git -C ${dest} pull"
+    echo "To switch to the install script, move or delete that folder first."
+    exit 1
 else
     # keep the folder color chosen with change-color.sh
-    savedFolder=""
-    if [ -f "${dest}/scalable/places/folder.svg" ]; then
-        savedFolder="$(mktemp)"
-        cp "${dest}/scalable/places/folder.svg" "$savedFolder"
-    fi
+    folderColor="$(cat "${dest}/.folder-color" 2>/dev/null || true)"
 
     rm -rf "$dest"
     mkdir -p "$dest"
-    cp -a "$srcDir"/{index.theme,scalable,Palette.txt,change-color.sh,watch-accent.sh,LICENSE} "$dest"/
+    cp -a --no-preserve=ownership "$srcDir"/{index.theme,scalable,Palette.txt,change-color.sh,watch-accent.sh,LICENSE} "$dest"/
 
-    if [ -n "$savedFolder" ]; then
-        mv "$savedFolder" "${dest}/scalable/places/folder.svg"
-        chmod 644 "${dest}/scalable/places/folder.svg"
+    if [ -n "$folderColor" ]; then
+        "${dest}/change-color.sh" "$folderColor" --no-reload || true
     fi
 
     command -v gtk-update-icon-cache >/dev/null && gtk-update-icon-cache -qf "$dest" 2>/dev/null || true

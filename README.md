@@ -32,7 +32,7 @@ sudo ./install.sh --system    # system-wide (/usr/share/icons/Neuwaita)
 ./install.sh --watch-accent   # current user + folders follow the GNOME accent color
 ./install.sh --uninstall      # remove (add --system for the system-wide install)
 ```
-The script copies only the theme files, keeps the folder color you chose and replaces any previous Neuwaita installation in the same place.
+The script copies only the theme files and replaces a previous installation made with it, keeping the folder color you chose. It never overwrites a git clone or a folder that is not Neuwaita.
 
 ### Activating the theme
 Select Neuwaita in GNOME Tweaks, or run:
