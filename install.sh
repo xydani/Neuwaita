@@ -83,13 +83,8 @@ EOF
     echo "Accent color watcher enabled"
 fi
 
-if [ $system = 0 ] && command -v gsettings >/dev/null; then
-    if [ "$(gsettings get org.gnome.desktop.interface icon-theme 2>/dev/null)" = "'Neuwaita'" ]; then
-        # switch theme back and forth so running apps reload the icons
-        gsettings set org.gnome.desktop.interface icon-theme 'hicolor'
-        gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'
-        echo "Theme reloaded"
-    else
-        echo "Activate it with: gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'"
-    fi
+if [ $system = 0 ] && command -v gsettings >/dev/null \
+    && [ "$(gsettings get org.gnome.desktop.interface icon-theme 2>/dev/null)" != "'Neuwaita'" ]; then
+    echo "Activate it with: gsettings set org.gnome.desktop.interface icon-theme 'Neuwaita'"
 fi
+echo "Log out and back in to see the new icons everywhere."

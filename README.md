@@ -37,6 +37,7 @@ git -C ~/.local/share/icons/Neuwaita pull
 sudo git -C /usr/share/icons/Neuwaita pull
 # install script: pull/download the new version and run ./install.sh again
 ```
+After installing or updating, log out and back in so every app picks up the new icons.
 If you changed the folder color with `change-color.sh`, run `git -C <install dir> checkout scalable/places/folder.svg` before pulling, then set the color again.
 ## Customize folder colors
 Run change-color.sh to change the folder's colors, See [Palette.txt](Palette.txt) for available colors.
