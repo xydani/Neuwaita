@@ -9,9 +9,6 @@
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="com.slack.Slack.svg"
-   inkscape:export-filename="/home/retro/.icons/skeuowaita/scalable/apps/skeuowaita.png"
-   inkscape:export-xdpi="1536"
-   inkscape:export-ydpi="1536"
    xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -428,10 +425,7 @@
        id="path953"
        cx="64"
        cy="60"
-       r="55"
-       inkscape:export-filename="/home/retro/.icons/skeuowaita/scalable/apps/skeuwaita.png"
-       inkscape:export-xdpi="1536"
-       inkscape:export-ydpi="1536" /><g
+       r="55" /><g
        id="g465"
        transform="translate(0,2)"><path
          id="path2951"
@@ -468,10 +462,7 @@
        id="circle1662"
        cx="64"
        cy="60"
-       r="52.203354"
-       inkscape:export-filename="/home/retro/.icons/skeuowaita/scalable/apps/skeuwaita.png"
-       inkscape:export-xdpi="1536"
-       inkscape:export-ydpi="1536" /><path
+       r="52.203354" /><path
        id="path2171"
        style="fill:#b3b3b3;fill-opacity:1;stroke-width:0.647609"
        d="m 31.820228,66.206691 c -4.727542,0 -8.546875,3.821285 -8.546875,8.548828 0,0.338972 0.02429,0.671424 0.0625,1 -0.03821,0.328576 -0.0625,0.661028 -0.0625,1 0,4.727542 3.819333,8.548828 8.546875,8.548828 4.727543,0 8.548828,-3.821286 8.548828,-8.548828 v -2 -6.548828 -2 z m 21.371094,0 c -4.727542,0 -8.546875,3.821285 -8.546875,8.548828 v 2 19.371094 2 c 0,4.727537 3.819333,8.548827 8.546875,8.548827 4.727543,0 8.548828,-3.82129 8.548828,-8.548827 v -2 -19.371094 -2 c 0,-4.727543 -3.821285,-8.548828 -8.548828,-8.548828 z" /><path

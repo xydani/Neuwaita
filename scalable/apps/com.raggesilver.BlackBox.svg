@@ -415,14 +415,4 @@
          x="13.838"
          y="9.8380003"
          rx="12"
-         ry="12" /><text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:53.2426px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';fill:#cccccc;stroke-width:27.9208;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter517)"
-         x="30.833197"
-         y="78.555031"
-         id="text472"><tspan
-           sodipodi:role="line"
-           id="tspan470"
-           x="30.833197"
-           y="78.555031"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';stroke-width:27.9208">$</tspan></text></g></g></svg>
+         ry="12" /><path id="text472" style="fill:#cccccc;stroke-width:27.9208;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter517)" d="M44.0373618 85.0506282H50.1602608V78.1290902C55.857219 76.8512678 59.264745399999995 72.964558 59.264745399999995 67.53381279999999C59.264745399999995 54.8088314 41.2687466 58.8020264 41.2687466 51.667518C41.2687466 48.9521454 43.6646636 47.40811 47.9240716 47.40811C50.586201599999995 47.40811 53.7807576 47.9937786 56.2831598 49.005387999999996L58.0934082 43.787613199999996C55.7507338 42.669518599999996 52.928876 41.9241222 50.1602608 41.711151799999996V34.896099H44.0373618V42.0306074C38.180675799999996 43.3084298 34.453693799999996 47.248382199999995 34.453693799999996 52.625884799999994C34.453693799999996 64.7651976 52.3432074 61.1979434 52.3432074 68.3856944C52.3432074 70.9413392 50.2135034 72.6451024 46.007338 72.6451024C43.0257524 72.6451024 39.139042599999996 71.8464634 35.7315162 70.3556706L33.8147826 75.626688C36.956096 77.1707234 40.416865 78.2355754 44.0373618 78.5017884Z" /></g></g></svg>

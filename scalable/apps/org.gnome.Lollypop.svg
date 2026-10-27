@@ -9,9 +9,6 @@
    id="svg5"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="org.gnome.Lollypop.svg"
-   inkscape:export-filename="/home/retro/.icons/skeuowaita/scalable/apps/skeuowaita.png"
-   inkscape:export-xdpi="1536"
-   inkscape:export-ydpi="1536"
    xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -387,10 +384,7 @@
        id="path953"
        cx="64"
        cy="60"
-       r="55"
-       inkscape:export-filename="/home/retro/.icons/skeuowaita/scalable/apps/skeuwaita.png"
-       inkscape:export-xdpi="1536"
-       inkscape:export-ydpi="1536" /><text
+       r="55" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';fill:#000000;fill-opacity:1;stroke:none"
        x="57.303368"
@@ -439,9 +433,7 @@
            style="font-size:5.33333px;stroke-width:0.332649">org.gnome.Lollypop</tspan></text><g
          style="display:inline;fill:#000000;enable-background:new"
          transform="matrix(7.9911709,0,0,8.0036407,-167.7909,-4846.0776)"
-         id="g12027"
-         inkscape:export-xdpi="12"
-         inkscape:export-ydpi="12" /><rect
+         id="g12027" /><rect
          style="display:inline;overflow:visible;visibility:visible;fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;enable-background:accumulate"
          id="rect13805"
          width="128"

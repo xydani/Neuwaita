@@ -9,9 +9,6 @@
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="emacs.svg"
-   inkscape:export-filename="/home/retro/.icons/skeuowaita/scalable/apps/skeuowaita.png"
-   inkscape:export-xdpi="1536"
-   inkscape:export-ydpi="1536"
    xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -645,10 +642,7 @@
        id="path953"
        cx="64"
        cy="60"
-       r="55"
-       inkscape:export-filename="/home/retro/.icons/skeuowaita/scalable/apps/skeuwaita.png"
-       inkscape:export-xdpi="1536"
-       inkscape:export-ydpi="1536" /><text
+       r="55" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';fill:#000000;fill-opacity:1;stroke:none"
        x="57.303368"
@@ -690,10 +684,7 @@
        id="circle466"
        cx="64"
        cy="60"
-       r="52.489449"
-       inkscape:export-filename="/home/retro/.icons/skeuowaita/scalable/apps/skeuwaita.png"
-       inkscape:export-xdpi="1536"
-       inkscape:export-ydpi="1536" /><g
+       r="52.489449" /><g
        id="g14621"
        transform="translate(2.4e-5,-3.195191)"><path
          id="path14616"
