@@ -133,7 +133,7 @@ ls /usr/share/icons/hicolor/*/status/ /usr/share/icons/hicolor/*/apps/ | grep -i
 Proton VPN, for example, uses `com.protonvpn.www.state-connected`, `-disconnected` and `-error`. Tray icons can be themed only if the app asks for them by name; if it loads them from a file path, no icon theme can change them.
 
 ## Contributing
-Pull requests with new icons are welcome. Please follow the conventions of the existing icons:
+Pull requests with new icons are welcome. See [GUIDELINES.md](GUIDELINES.md) for how to draw icons in the Neuwaita style (shapes, colors, dark variants), and follow these conventions:
 - **Format:** SVG, 128×128 canvas (`viewBox="0 0 128 128"`) for app icons, in the same style as the rest of the theme (flat shapes with a darker offset "depth" layer). Inkscape works well.
 - **Where:** app icons go in `scalable/apps/`, file type icons in `scalable/mimetypes/`, folders in `scalable/places/`, tray and status icons in `scalable/status/`. Alternative versions that are not enabled by default go in `Extras/`.
 - **Naming:** name the file after the reverse domain name (e.g. `com.usebruno.Bruno.svg`). Other names the same app uses should be **relative symlinks** to it:
